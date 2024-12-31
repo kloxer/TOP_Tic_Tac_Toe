@@ -1,0 +1,150 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+/* RESET */
+
+body{
+  text-align: center;
+  background-color: rgb(176, 176, 176);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.title{
+    text-align: center;
+    font-weight:bolder;
+    font-size: 30px;
+    color: rgb(36, 36, 36);   
+    margin-bottom: 50px;
+    margin-top: 40px;
+
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    justify-content: center;
+    gap:5px;
+    
+  }
+
+.cell{
+    background-color:rgb(255, 255, 255);
+    border-style: none;
+    box-shadow: 4px 4px 2px -2px rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 35px;
+    color:rgb(21, 21, 21);
+    border-radius: 5px;
+}
+.score{
+  background-color: rgb(18, 18, 18);
+  gap:10px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 10px;
+  margin-bottom: 40px;;
+  box-shadow: 0 4px 2px -2px rgb(36, 36, 36);
+
+}
+
+.user, .score1, .score2{
+  font-weight: bold;
+  color:white;
+}
+
+.bottomButtons{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  background-color: rgb(28, 28, 28);
+  box-shadow: 0 4px 2px -2px rgb(36, 36, 36);
+
+  border-style: none;
+  border-radius: 5px;
+  padding:5px 30px;
+  font-weight: bold;
+  color:white;
+}
+
+.message{
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+/* Ensure the parent container takes full height and centers its children */
+.parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Ensure it stays in place */
+
+}
+
+/* Existing dialog styles */
+dialog[open] {
+  border: none !important;
+  border-radius: calc(5px * var(--ratio));
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  padding: 1.6rem;
+  max-width: 400px;
+  background-color: white; /* Ensure it has a background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}

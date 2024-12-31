@@ -5,8 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <div class="title">Tic Tac Toe</div>
+    <div class="score">
+        <div class="user" id="user1">
+            Player1
+        </div>
+        <div  class="user"  id="user2">Player2</div>
+        <div class="score1">0</div>
+        <div class="score2">0</div>
+    </div>
+
+
+    <div class="game">
+        
+    </div>
+     <div>
+        <button class="bottomButtons" id="updateDetails">Update Names</button>
+      </div>
+    <button class="bottomButtons" id="reset">Reset Game</button>
+    <div class="message"></div>
+
+<!-- pop-up dialog box, containing a form -->
+<div class="parentContainer">
+    <dialog id="favDialog">
+        <form method="dialog">
+          <p>
+            <label for="firstName">first Player</label>
+            <input type="firstName" name="firstName" id="firstName" required />
+            <label for="secondName">second Player</label>
+            <input type="firstName" name="secondName" id="secondName" required />
+          </p>
+          <div>
+            <button class="dialogButtons" id="cancel" type="reset">Cancel</button>
+            <button class="dialogButtons" id="confirmBtn" value="default">Confirm</button>
+        </div>
+        </form>
+      </dialog>
+</div>
+  
+
+
 </body>
 </html>

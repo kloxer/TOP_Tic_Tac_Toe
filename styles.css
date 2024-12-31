@@ -46,6 +46,7 @@
     isolation: isolate;
   }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 /* RESET */
 
 body{
@@ -127,24 +128,43 @@ body{
 }
 
 /* Ensure the parent container takes full height and centers its children */
-.parent-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed; /* Ensure it stays in place */
 
-}
 
 /* Existing dialog styles */
-dialog[open] {
+dialog {
+  position: fixed; /* Position relative to the viewport */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset by half of its width and height */
   border: none !important;
-  border-radius: calc(5px * var(--ratio));
+  border-radius: 5px;
   box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   padding: 1.6rem;
-  max-width: 400px;
-  background-color: white; /* Ensure it has a background */
+  max-width: 500px;
+  background-color: rgb(91, 91, 91);
+}
+
+form{
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+input{
+  max-width: 100px;
+}
+.formButtons{
+  margin-top: 20px;
+}
+.dialogButtons{
+
+  background-color: rgb(28, 28, 28);
+  box-shadow: 0 4px 2px -2px rgb(36, 36, 36);
+
+  border-style: none;
+  border-radius: 5px;
+  padding:5px 30px;
+  font-weight: bold;
+  color:white;
 }

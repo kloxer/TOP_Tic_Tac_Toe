@@ -4,7 +4,7 @@ A web-based Tic Tac Toe game developed as part of [The Odin Project's JavaScript
 
 ## Live Demo
 
-Check out the live version of the game: [Your GitHub Pages Link Here]
+Check out the live version of the game: [https://kloxer.github.io/TOP_Tic_Tac_Toe/]
 
 ## Features
 
